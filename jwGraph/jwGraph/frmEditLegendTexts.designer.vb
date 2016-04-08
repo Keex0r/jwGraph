@@ -32,8 +32,8 @@ Namespace jwGraph
             Me.btnOk = New System.Windows.Forms.Button()
             Me.tmrBlink = New System.Windows.Forms.Timer(Me.components)
             Me.tmrStopBlink = New System.Windows.Forms.Timer(Me.components)
-            Me.MarkedDGV1 = New MarkedDGV()
-            CType(Me.MarkedDGV1, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.dgvTexts = New DataGridView()
+            CType(Me.dgvTexts, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'lblTitle
@@ -73,16 +73,14 @@ Namespace jwGraph
             '
             'MarkedDGV1
             '
-            Me.MarkedDGV1.AllowDrop = True
-            Me.MarkedDGV1.AllowUserToResizeRows = False
+            Me.dgvTexts.AllowDrop = True
+            Me.dgvTexts.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue
             DataGridViewCellStyle1.ForeColor = System.Drawing.Color.MediumBlue
-            Me.MarkedDGV1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.MarkedDGV1.AutoCommitCheckboxColumns = True
-            Me.MarkedDGV1.AutoCommitComboboxColumns = True
-            Me.MarkedDGV1.BackgroundColor = System.Drawing.Color.GhostWhite
-            Me.MarkedDGV1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText
-            Me.MarkedDGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            Me.dgvTexts.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+            Me.dgvTexts.BackgroundColor = System.Drawing.Color.GhostWhite
+            Me.dgvTexts.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText
+            Me.dgvTexts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.Color.GhostWhite
             DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -90,15 +88,11 @@ Namespace jwGraph
             DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.MarkedDGV1.DefaultCellStyle = DataGridViewCellStyle2
-            Me.MarkedDGV1.DontAutoFormat = False
-            Me.MarkedDGV1.DoubleBuffered = True
-            Me.MarkedDGV1.Location = New System.Drawing.Point(12, 48)
-            Me.MarkedDGV1.Marker = Nothing
-            Me.MarkedDGV1.Name = "MarkedDGV1"
-            Me.MarkedDGV1.NoLinesText = Nothing
-            Me.MarkedDGV1.Size = New System.Drawing.Size(338, 220)
-            Me.MarkedDGV1.TabIndex = 49
+            Me.dgvTexts.DefaultCellStyle = DataGridViewCellStyle2
+            Me.dgvTexts.Location = New System.Drawing.Point(12, 48)
+            Me.dgvTexts.Name = "dgvTexts"
+            Me.dgvTexts.Size = New System.Drawing.Size(338, 220)
+            Me.dgvTexts.TabIndex = 49
             '
             'frmEditLegendTexts
             '
@@ -107,19 +101,18 @@ Namespace jwGraph
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.LightSteelBlue
             Me.ClientSize = New System.Drawing.Size(362, 314)
-            Me.Controls.Add(Me.MarkedDGV1)
+            Me.Controls.Add(Me.dgvTexts)
             Me.Controls.Add(Me.btnOk)
             Me.Controls.Add(Me.lblTitle)
             Me.ForeColor = System.Drawing.Color.MediumBlue
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-            Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
             Me.MinimizeBox = False
             Me.Name = "frmEditLegendTexts"
             Me.ShowInTaskbar = False
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
             Me.Text = "Graph image export"
-            CType(Me.MarkedDGV1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.dgvTexts, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
 
         End Sub
@@ -127,6 +120,6 @@ Namespace jwGraph
         Friend WithEvents btnOk As System.Windows.Forms.Button
         Friend WithEvents tmrBlink As Timer
         Friend WithEvents tmrStopBlink As Timer
-        Friend WithEvents MarkedDGV1 As MarkedDGV
+        Friend WithEvents dgvTexts As DataGridView
     End Class
 End Namespace

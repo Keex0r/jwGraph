@@ -102,9 +102,6 @@
     <Compile Include="Classes\Markers\VerticalMarker.vb" />
     <Compile Include="Classes\Series.vb" />
     <Compile Include="Classes\VerticalAxis.vb" />
-    <Compile Include="clsMarkedDGV.vb">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="frmDataExportSetup.designer.vb" />
     <Compile Include="frmDataExportSetup.vb">
       <SubType>Form</SubType>
